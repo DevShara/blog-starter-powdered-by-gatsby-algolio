@@ -1,7 +1,11 @@
 import React from 'react';
+import Navbar from '../components/navbar'
 
 export default () => {
   return (
-    <h1>This is the heading</h1>
+    <>
+      <Navbar />
+      <h1>This is the heading</h1>
+    </>
   )
-}
+} 
