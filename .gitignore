@@ -2,3 +2,5 @@ img
 node_modules
 public
 .cache
+# Local Netlify folder
+.netlify
