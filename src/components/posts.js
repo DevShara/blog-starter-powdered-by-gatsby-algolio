@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Post from "./post";
 
-
-
 const Posts = () => {
 
   let [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('api/fetch-posts')
+    fetch('./posts.json')
       .then(res => res.json())
       .then(data => {
         setPosts(data)

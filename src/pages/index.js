@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
-import Posts from '../components/posts.js';
+import Posts from '../components/posts';
+import Details from '../components/post-details'
 
 export default () => {
 
