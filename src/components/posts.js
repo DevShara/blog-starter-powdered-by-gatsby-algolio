@@ -1,18 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Post from "./post";
 
-const Posts = () => {
+const Posts = ({ posts }) => {
 
-  let [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    fetch('./posts.json')
-      .then(res => res.json())
-      .then(data => {
-        setPosts(data)
-
-      })
-  }, [])
 
   return (
     <div className="container px-8 mx-auto">
@@ -21,9 +12,6 @@ const Posts = () => {
         {posts.map(post => {
           return (<Post>{post}</Post>)
         })}
-
-
-
 
       </div>
     </div>

@@ -1,23 +1,32 @@
 
-const posts = require('./functions/posts.json');
+exports.createPages = ({ graphql, actions: { createPage } }) => {
 
-exports.createPages = ({ actions: { createPage } }) => {
-  // `getPokemonData` is a function that fetches our data
+  return graphql(`
+    query GetAllPosts {
+      allSanityPost {
+        nodes {
+          id
+          title
+          category
+          imageUrl
+          body
+          createdAt
+          
+        }
+      }
+    }`)
+    .then(result => {
+      if (result.errors) {
+        throw result.errors
+      }
 
+      result.data.allSanityPost.nodes.forEach(post => {
+        createPage({
+          path: `/${post.id}`,
+          component: require.resolve("./src/components/post-details.js"),
+          context: { post },
+        })
+      })
 
-  // Create a page that lists all Pokémon.
-  // createPage({
-  //   path: `/`,
-  //   component: require.resolve("./src/templates/all-pokemon.js"),
-  //   context: { allPokemon },
-  // })
-
-  // Create a page for each Pokémon.
-  posts.forEach(post => {
-    createPage({
-      path: `/post/${post.id}/`,
-      component: require.resolve("./src/components/post-details.js"),
-      context: { post },
     })
-  })
 }
