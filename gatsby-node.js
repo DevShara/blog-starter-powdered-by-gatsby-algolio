@@ -1,3 +1,4 @@
+const path = require("path");
 
 exports.createPages = ({ graphql, actions: { createPage } }) => {
 
@@ -11,6 +12,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           imageUrl
           body
           createdAt
+          path
           
         }
       }
@@ -22,7 +24,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
 
       result.data.allSanityPost.nodes.forEach(post => {
         createPage({
-          path: `/${post.id}`,
+          path: `/${post.path}`,
           component: require.resolve("./src/components/post-details.js"),
           context: { post },
         })

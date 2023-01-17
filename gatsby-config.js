@@ -10,7 +10,7 @@ module.exports = {
         projectId: 'qgsx2p7p',
         dataset: 'production'
       }
-    }
+    },
   ],
 }
 

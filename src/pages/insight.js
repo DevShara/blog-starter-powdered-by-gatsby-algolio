@@ -16,6 +16,7 @@ export default () => {
         imageUrl
         body
         createdAt
+        path
       }
     }
   }

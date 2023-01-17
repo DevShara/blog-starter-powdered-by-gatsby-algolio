@@ -7,7 +7,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 export default () => {
 
   const data = useStaticQuery(graphql`
-  query MyQuery {
+  query GetAllPosts {
     allSanityPost {
       nodes {
         id
@@ -16,6 +16,7 @@ export default () => {
         imageUrl
         body
         createdAt
+        path
         
       }
     }
