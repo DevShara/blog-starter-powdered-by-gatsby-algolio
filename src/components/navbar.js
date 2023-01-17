@@ -7,22 +7,22 @@ const Navbar = () => (
       <div className="flex flex-col items-center">
         <h1 className="text-inherit m-3 font-bold text-3xl "><Link to="/"><a href="#">THE BLOG</a></Link></h1>
         <div className="border-t border-gray p-2">
-          <ul class="flex">
-            <li class="mr-6">
+          <ul className="flex">
+            <li className="mr-6">
 
-              <Link to=""><a class="text-gray-400  hover:text-black" href="#">Spotlight</a></Link>
+              <Link to=""><a className="text-gray-400  hover:text-black" href="#">Spotlight</a></Link>
             </li>
-            <li class="mr-6">
-              <Link to="/insight"><a class="text-gray-400  hover:text-black" href="#">Insights</a></Link>
+            <li className="mr-6">
+              <Link to="/insight"><a className="text-gray-400  hover:text-black" href="#">Insights</a></Link>
             </li>
-            <li class="mr-6">
-              <a class="text-gray-400  hover:text-black" href="#">History & Culture</a>
+            <li className="mr-6">
+              <a className="text-gray-400  hover:text-black" href="#">History & Culture</a>
             </li>
-            <li class="mr-6">
-              <a class="text-gray-400  hover:text-black" href="#">Identities</a>
+            <li className="mr-6">
+              <a className="text-gray-400  hover:text-black" href="#">Identities</a>
             </li>
-            <li class="mr-6">
-              <a class="text-gray-400  hover:text-black" href="#">Travel</a>
+            <li className="mr-6">
+              <a className="text-gray-400  hover:text-black" href="#">Travel</a>
             </li>
           </ul>
         </div>
