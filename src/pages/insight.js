@@ -26,9 +26,6 @@ export default () => {
   return (
     <Layout>
       <Posts posts={posts} />
-
-
-
     </Layout>
   )
 }
