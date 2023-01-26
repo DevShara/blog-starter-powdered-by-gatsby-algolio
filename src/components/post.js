@@ -8,7 +8,7 @@ const Post = ({ hit }) => {
 
   return (
     <>
-      <Link to={`/${hit}`} >
+      <Link to={`/${hit.path}`} >
         <div className=" shadow overflow-hidden rounded-lg cursor-pointer">
           <img className="w-full" src={hit.imageUrl} />
           <div className="content-wrap p-2">
